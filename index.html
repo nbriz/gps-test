@@ -18,12 +18,12 @@ function success(pos) {
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);
-  document.querySelector('.ouput').textContent = `${crd.latitude}, ${crd.longitude}`
+  document.querySelector('.output').textContent = `${crd.latitude}, ${crd.longitude}`
 }
 
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
-  document.querySelector('.ouput').textContent = err.message
+  document.querySelector('.output').textContent = err.message
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
